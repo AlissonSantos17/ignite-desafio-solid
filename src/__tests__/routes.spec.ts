@@ -56,7 +56,7 @@ describe("[PATCH] /users/:user_id/admin", () => {
     const response = await request(app)
       .patch(`/users/${v4()}/admin`)
       .expect(404);
-
+    console.log(response);
     expect(response.body.error).toBeTruthy();
   });
 });
